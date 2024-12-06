@@ -1,0 +1,38 @@
+/* --------- Barre de navigation ---------- */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'anonymous';
+
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: white;
+    }
+
+    .language {
+      font-weight: bold;
+      font-size: 24px;
+      color: white;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        margin: 20px;
+        font-size: 18px;
+        font-weight: 400;
+
+        a {
+          color: white;
+        }
+      }
+    }
+}
+
