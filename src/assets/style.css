@@ -19,6 +19,26 @@ li {
     list-style: none;
 }
 
+.notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+
+    button {
+        background-color: #2d2e6b;
+        border-radius: 10px;
+        border: none;
+        height: 45px;
+        width: 150px;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+
 /* Media queries pour pc */
 @media screen and (min-width: 992px) {
     body {
