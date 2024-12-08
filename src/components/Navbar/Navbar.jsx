@@ -19,7 +19,7 @@ function Navbar() {
       </div>
       
       <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
-        <li><a href="about">A propos</a></li>
+        <li><a href="/about">A propos</a></li>
         <li><a href="#">Mes Travaux</a></li>
         <li><a href="#">Projets</a></li>
         <li><a href="#">Blog</a></li>
