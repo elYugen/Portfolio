@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="navbar">
-      <a href="/" className="logo">Navbar</a>
-      <ul className="">
-        <li><a href="#">A propos</a></li>
+      <a href="/" className="logo">Yugen</a>
+
+      <div className="burger" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
+        <li><a href="about">A propos</a></li>
         <li><a href="#">Mes Travaux</a></li>
         <li><a href="#">Projets</a></li>
         <li><a href="#">Blog</a></li>
@@ -14,7 +27,7 @@ function Navbar() {
       </ul>
 
       {/* Choix de la langue */}
-      <p>Français</p>
+      <p className='language'>Français</p>
     </div>
   );
 };

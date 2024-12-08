@@ -1,0 +1,59 @@
+/* Media queries pour pc */
+@media screen and (min-width: 992px) {
+
+  /* --------- Footer ---------- */
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 63%;
+    margin: 0 auto;
+
+    hr {
+      width: 100%;
+      background-color: rgb(61, 61, 61);
+      border: none;
+      height: 1px;
+    }
+
+    a {
+      color: rgb(2, 128, 128);
+    }
+
+    p:last-child {
+      margin-top: 0;
+    }
+
+  }
+}
+
+/* Media queries pour smartphone */
+@media screen and (max-width: 480px) {
+
+  /* --------- Footer ---------- */
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+
+    hr {
+      width: 100%;
+      background-color: rgb(61, 61, 61);
+      border: none;
+      height: 1px;
+    }
+
+    a {
+      color: rgb(2, 128, 128);
+    }
+
+    p:last-child {
+      margin-top: 0;
+    }
+
+  }
+}

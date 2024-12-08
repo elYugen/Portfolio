@@ -13,6 +13,7 @@ body {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 li {
@@ -39,10 +40,28 @@ li {
     }
 }
 
+.about {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
 /* Media queries pour pc */
 @media screen and (min-width: 992px) {
     body {
         max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .container {
+        max-width: 50%;
         margin: 0 auto;
     }
 }
@@ -53,6 +72,11 @@ li {
         max-width: 90%;
         margin: 0 auto;
     }    
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 /* ------------ Classe lié au font ------------- */

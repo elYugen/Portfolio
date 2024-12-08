@@ -1,38 +1,116 @@
 /* --------- Barre de navigation ---------- */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'anonymous';
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  position: relative;
+
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+  }
+
+  .language {
+    font-weight: bold;
+    color: white;
+  }
+
+  ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    font-family: 'anonymous';
+    justify-content: space-between;
 
-    .logo {
-      font-weight: bold;
-      font-size: 24px;
-      color: white;
+    li {
+      margin: 20px;
+      font-size: 18px;
+      font-weight: 400;
+
+      a {
+        color: white;
+      }
     }
+  }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+
+/* Media queries pour pc */
+@media screen and (min-width: 992px) {
+  .burger {
+    display: none;
+  }
+  .navbar {
+    flex-direction: row;
+  }
+}
+
+/* Media queries pour smartphone */
+@media screen and (max-width: 480px) {
+  .navbar {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
 
     .language {
-      font-weight: bold;
-      font-size: 24px;
-      color: white;
+      display: none;
     }
 
     ul {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-
-      li {
-        margin: 20px;
-        font-size: 18px;
-        font-weight: 400;
-
-        a {
-          color: white;
-        }
-      }
+      display: none;
     }
-}
+  }
 
+  .burger {
+    display: flex;
+  }
+
+  .menu {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: -5.15%;
+    background-color: #333;
+    width: 100%;
+
+    li {
+      text-align: center;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      
+    }
+  }
+  
+  .menu.open {
+    display: flex; 
+    flex-direction: column;
+  }
+
+}
