@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
@@ -19,7 +20,7 @@ function Navbar() {
       </div>
       
       <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
-        <li><a href="/about">A propos</a></li>
+        <li><Link to="about">A propos</Link></li>
         <li><a href="#">Mes Travaux</a></li>
         <li><a href="#">Projets</a></li>
         <li><a href="#">Blog</a></li>
